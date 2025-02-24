@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="Images/png" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QuickBuy</title>
+
+    <style>
+
+
+ .animated-text::after {
+  content: "Welcome!";
+  animation: text 20s ease infinite;
+  display: inline-block;
+  }
+
+
+
+
+    @keyframes changecolor{
+      0%{background-image: url('https://media.istockphoto.com/id/1371500903/vector/mobile-app-courier-delivering-online-grocery-shop-order-seamless-pattern.jpg?s=612x612&w=0&k=20&c=3rM6A0KQAWi-OjbMtO8u9SjOJaBqEe-ndz9WAwfdY0c=');}
+     
+      50%{background-image:url('https://img.freepik.com/premium-vector/shopping-pattern-background-design_260839-17.jpg') ;}
+      
+      100%{background-image:url('https://img.freepik.com/premium-vector/food-product-outline-seamless-pattern-placed-categories-supermarket-meal-coloring-wallpaper_497027-482.jpg') ;}
+    }
+
+    @keyframes text{
+      0%{ content:"Welcome!"}
+      100%{content:"स्वागत है"}
+    }
+   
+    
+
+    
+
+    </style>
+ 
+
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
