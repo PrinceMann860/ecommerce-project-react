@@ -30,7 +30,7 @@ const Category = () => {
           {menProduct.map((value, index) => (
             <div key={index} className='lg:w-72 md:w-52 w-40 lg:h-auto flex-shrink-0'>
               <Link to={`/infopage/${value.id}`}>
-              <img src={value.image} alt="product-img" className='w-[100%] h-[50%] lg:h-[60%]' />
+              <img src={value.image} alt="product-img" className='w-[100%] h-[40%] lg:h-[60%]' />
                 <div className='px-2'>
                   <h2 className='font font-semibold text-xl'>{value.title}</h2>
     
@@ -46,7 +46,7 @@ const Category = () => {
           {electronicProduct.map((value, index) => (
             <div key={index} className='lg:w-72 md:w-52 w-40 lg:h-auto flex-shrink-0'>
             <Link to={`/infopage/${value.id}`}>
-            <img src={value.image} alt="product-img" className='w-[100%] h-[50%] lg:h-[60%]' />
+            <img src={value.image} alt="product-img" className='w-[100%] h-[40%] lg:h-[60%]' />
               <div className='px-2'>
                 <h2 className='font font-semibold text-xl'>{value.title}</h2>
   
@@ -62,7 +62,7 @@ const Category = () => {
           {womenProduct.map((value, index) => (
             <div key={index} className='lg:w-72 md:w-52 w-40 lg:h-auto flex-shrink-0'>
             <Link to={`/infopage/${value.id}`}>
-            <img src={value.image} alt="product-img" className='w-[100%] h-[50%] lg:h-[60%]' />
+            <img src={value.image} alt="product-img" className='w-[100%] h-[40%] lg:h-[60%]' />
               <div className='px-2'>
                 <h2 className='font font-semibold text-xl'>{value.title}</h2>
   
@@ -78,7 +78,7 @@ const Category = () => {
           {jeweleryProduct.map((value, index) => (
             <div key={index} className='lg:w-72 md:w-52 w-40 lg:h-auto flex-shrink-0'>
             <Link to={`/infopage/${value.id}`}>
-            <img src={value.image} alt="product-img" className='w-[100%] h-[50%] lg:h-[60%]' />
+            <img src={value.image} alt="product-img" className='w-[100%] h-[40%] lg:h-[60%]' />
               <div className='px-2'>
                 <h2 className='font font-semibold text-xl'>{value.title}</h2>
   
