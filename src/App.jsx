@@ -16,6 +16,7 @@ import MyOrders from './features/order/MyOrders'
 import Admin from './features/adminportal/admin'
 import RegisterForm from './features/register/Register'
 import LoginPage from './features/login/Login'
+import Chatbot from './features/chatbot/chatbot'
 function App() {
   
   const router = createBrowserRouter([
@@ -83,6 +84,10 @@ function App() {
         {
           path:"/login",
           element:<LoginPage></LoginPage>
+        },
+        {
+          path:"/chatbot",
+          element:<Chatbot></Chatbot>
         }
       ]
     }

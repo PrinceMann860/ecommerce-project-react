@@ -40,6 +40,9 @@ export default function Navbar() {
             <NavLink to="/Contact" className={({ isActive }) => (isActive ? "text-yellow-400" : "text-white")}>
               <li>Contact Us</li>
             </NavLink>
+            <NavLink to="/chatbot" className={({ isActive }) => (isActive ? "text-yellow-400" : "text-white")}>
+              <li>Help</li>
+            </NavLink>
           </ul>
         </div>
 
@@ -79,6 +82,9 @@ export default function Navbar() {
             </NavLink>
             <NavLink to="/Contact" className={({ isActive }) => (isActive ? "text-yellow-400" : "text-white")} onClick={toggleMenu}>
               <li>Contact Us</li>
+            </NavLink>
+            <NavLink to="/chatbot" className={({ isActive }) => (isActive ? "text-yellow-400" : "text-white")}>
+              <li>Help</li>
             </NavLink>
           </ul>
         </div>
