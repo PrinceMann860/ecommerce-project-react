@@ -14,9 +14,8 @@ import Page2 from './features/ShopWithUs/Page2'
 import Page3 from './features/ShopWithUs/Page3'
 import MyOrders from './features/order/MyOrders'
 import Admin from './features/adminportal/admin'
-import RegisterForm from './features/register/Register'
-import LoginPage from './features/login/Login'
 import Chatbot from './features/chatbot/chatbot'
+import Profile from './features/profile/Profile'
 function App() {
   
   const router = createBrowserRouter([
@@ -78,12 +77,8 @@ function App() {
           element:<MyOrders></MyOrders>
         },
         {
-          path:"/register",
-          element:<RegisterForm></RegisterForm>
-        },
-        {
-          path:"/login",
-          element:<LoginPage></LoginPage>
+          path:"/Profile",
+          element:<Profile></Profile>
         },
         {
           path:"/chatbot",

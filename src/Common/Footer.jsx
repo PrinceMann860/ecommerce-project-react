@@ -26,7 +26,7 @@ export default function Footer() {
             </li>
           </ul>
         </div>
-        <Link to={'/admin'}>
+        <a href="/admin">
           <div className='mb-10'>
             <h4 className='text-[3vh] lg:text-4xl text-white'>Make Money with Us</h4>
             <ul className='flex flex-col mt-5 items-center lg:items-center'>
@@ -36,7 +36,7 @@ export default function Footer() {
               <li className='text-[2vh] lg:text-3xl text-zinc-400'>Advertise Your Products</li>
             </ul>
           </div>
-        </Link>
+        </a>
         <div className='mb-10'>
           <h4 className='text-[3vh] lg:text-4xl text-white text-center'>Let Us Help You</h4>
           <ul className='flex flex-col mt-5 items-center lg:items-center'>

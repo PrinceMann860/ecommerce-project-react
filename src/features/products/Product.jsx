@@ -73,7 +73,7 @@ const Product = () => {
                 <div className='px-2'>
                   <h2 className='font font-semibold text-xl'>{value.title}</h2>
 
-                  <div className='text-lg font-semibold'>{value.price} <p className='inline text-orange-400 font-medium'>({value.discount}% OFF)</p></div>
+                  <div className='text-lg font-semibold'>${value.price} <p className='inline text-orange-400 font-medium'>({value.discount}% OFF)</p></div>
                 </div>
               </Link>
             </div>
@@ -89,7 +89,7 @@ const Product = () => {
                 <div className='px-2'>
                   <h2 className='font font-semibold text-xl'>{value.title}</h2>
 
-                  <div className='text-lg font-semibold'>{value.price} <p className='inline text-orange-400 font-medium'>({value.discount}% OFF)</p></div>
+                  <div className='text-lg font-semibold'>${value.price} <p className='inline text-orange-400 font-medium'>({value.discount}% OFF)</p></div>
                 </div>
               </Link>
             </div>
@@ -105,7 +105,7 @@ const Product = () => {
                 <div className='px-2'>
                   <h2 className='font font-semibold text-xl'>{value.title}</h2>
 
-                  <div className='text-lg font-semibold'>{value.price} <p className='inline text-orange-400 font-medium'>({value.discount}% OFF)</p></div>
+                  <div className='text-lg font-semibold'>${value.price} <p className='inline text-orange-400 font-medium'>({value.discount}% OFF)</p></div>
                 </div>
               </Link>
             </div>
@@ -121,7 +121,7 @@ const Product = () => {
                 <div className='px-2'>
                   <h2 className='font font-semibold text-xl'>{value.title}</h2>
 
-                  <div className='text-lg font-semibold'>{value.price} <p className='inline text-orange-400 font-medium'>({value.discount}% OFF)</p></div>
+                  <div className='text-lg font-semibold'>${value.price} <p className='inline text-orange-400 font-medium'>({value.discount}% OFF)</p></div>
                 </div>
               </Link>
             </div>

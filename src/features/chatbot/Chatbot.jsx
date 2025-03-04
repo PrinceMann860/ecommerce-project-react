@@ -37,11 +37,15 @@ const Chatbot = () => {
       "hey": "Hey! How can I assist you today?",
       "hi": "Hi! How can I assist you today?",
       "what is your name": "I'm QuickBuy's AI Chatbot.",
-      "how can i track my orders": "You can track your order by visiting the 'My Orders' section in your account.",
-      "what is the return policy": "Our return policy allows returns within 30 days of purchase. Please visit our return policy page for more details.",
-      "what is the replacement policy": "We offer replacements for defective products within 15 days of purchase. Please visit our replacement policy page for more details.",
+      "how can i track my orders": "You can track your order by visiting the 'Orders' section in your account.",
+      "what is your return policy": "Our return policy allows returns within 30 days of purchase. Please visit our return policy page for more details.",
+      "what is your replacement policy": "We offer replacements for defective products within 15 days of purchase. Please visit our replacement policy page for more details.",
       "how can i list my products on your site": "You can list your products on our website through the admin portal which you can access from the below footer section (black part at the bottom of the page).",
-      "how can i contact to your customer support": "You can contact our support team via the 'Contact Us' page or call our customer service number '+1 xxx-xxx-xxx-x'."
+      "how can i contact to your customer support": "You can contact our support team via the 'Contact Us' page or call our customer service number '+1 xxx-xxx-xxx-x'.",
+      "what type of products do you sell": "We sell a wide range of products including electronics, clothing, accessories, and more.",
+      "how can i reset my password": "You can reset your password by visiting the 'Forgot Password' page on our website.",
+      "how can i register on your site": "You can register on our website by using the login button on the navbar from login page you can see the sign up option through which you can register on our site.",
+      "how can i login to my account": "You can login to your account by using the login button on the navbar.",
     };
 
     return responses[userInput.toLowerCase()] || "I'm sorry, I am unable to help you at this moment, Our Customer support will reach you soon";

@@ -4,11 +4,18 @@ import './index.css';
 import App from './App.jsx';
 import { Provider } from 'react-redux';
 import store from './store.js';
+import { Auth0Provider } from '@auth0/auth0-react';
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
+  <Auth0Provider
+    domain="dev-5bh5bfgvx6g0amv6.us.auth0.com"
+    clientId="2kFAlw8eagq3WkqXMGQKbqzWiE8a4bQb"
+    authorizationParams={{
+      redirect_uri: window.location.origin
+    }}
+  >
     <Provider store={store}>
       <App />
     </Provider>
-  </StrictMode>
+  </Auth0Provider>
 );
