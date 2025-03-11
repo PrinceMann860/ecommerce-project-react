@@ -46,10 +46,10 @@ export default function Home() {
         <div className='m-5 lg:p-[10%] w-1/2 p-[5%]'>
           <h1 className='text-[4vw] lg:text-5xl font-bold text-amber-600 animated-text'></h1>
           <h1 className='text-black text-[3vw] lg:text-5xl font-bold lg:pt-10'>
-            QuickBay: Where Speed Meets Savings!
+            QuickBuy: Where Speed Meets Savings!
           </h1>
           <p className='text-[3vw] lg:text-4xl text-gray-900 lg:pt-10 font-semibold font-cursive'>
-            Discover top groceries, beauty, Fragrances, and Furniture items from Amaron. Enjoy great deals and excellent service, all in one place. Simplify your shopping experience with us.
+            Discover top class clothing, accessories, jewelery and electronics items from QuickBuy. Enjoy great deals and excellent service, all in one place. Simplify your shopping experience with us.
           </p>
           <Link to={'/Product'}>
           <button className='bg-amber-600 w-auto p-2 mt-8 h-auto text-white text-[2vw] rounded-md hover:text-red-950'>

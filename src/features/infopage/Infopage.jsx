@@ -87,9 +87,11 @@ const Infopage = () => {
             <input type="number" id="quantity" min="1" max={5} value={userInput} onChange={handleChange} defaultValue={1} className="mt-1 block w-full p-2 border border-gray-300 rounded-md" />
           </div>
           <div className='flex justify-around w-[300px]'>
+          <Link to={`/Buy/${productinfo.id}`}>
           <button className="bg-amber-400 text-black px-6 py-3 rounded-lg hover:bg-amber-500 transition duration-300">
             Buy Now
           </button>
+          </Link>
           <Link to={`/cart/${productinfo.id}`}>
             <button className="bg-amber-400 text-black px-6 py-3 rounded-lg hover:bg-amber-500 transition duration-300">
               Add To Cart

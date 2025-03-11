@@ -16,6 +16,8 @@ import MyOrders from './features/order/MyOrders'
 import Admin from './features/adminportal/admin'
 import Chatbot from './features/chatbot/chatbot'
 import Profile from './features/profile/Profile'
+import Buy from './features/Buypage/Buy'
+import Return from './features/Return/Return'
 function App() {
   
   const router = createBrowserRouter([
@@ -73,8 +75,16 @@ function App() {
           element:<Page3></Page3>
         },
         {
+          path:"/Buy/:id",
+          element:<Buy></Buy>
+        },
+        {
           path:"/my-orders",
           element:<MyOrders></MyOrders>
+        },
+        {
+          path: "/Return",
+          element: <Return></Return>
         },
         {
           path:"/Profile",

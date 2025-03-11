@@ -40,10 +40,18 @@ export default function Footer() {
         <div className='mb-10'>
           <h4 className='text-[3vh] lg:text-4xl text-white text-center'>Let Us Help You</h4>
           <ul className='flex flex-col mt-5 items-center lg:items-center'>
-            <li className='text-[2vh] lg:text-3xl text-zinc-400'>Your Account</li>
-            <li className='text-[2vh] lg:text-3xl text-zinc-400'>Returns Center</li>
-            <li className='text-[2vh] lg:text-3xl text-zinc-400'>100% Purchase Protection</li>
-            <li className='text-[2vh] lg:text-3xl text-zinc-400'>Help Center</li>
+            <Link to="/Profile">
+              <li className='text-[2vh] lg:text-3xl text-zinc-400'>Your Account</li>
+            </Link>
+            <Link to="/Return">
+              <li className='text-[2vh] lg:text-3xl text-zinc-400'>Returns Center</li>
+            </Link>
+            <Link to="/Page3">
+              <li className='text-[2vh] lg:text-3xl text-zinc-400'>100% Purchase Protection</li>
+            </Link>
+            <Link to="/chatbot">
+              <li className='text-[2vh] lg:text-3xl text-zinc-400'>Help Center</li>
+            </Link>
           </ul>
         </div>
       </div>
