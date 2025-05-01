@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
 import { PiTruck } from "react-icons/pi";
 import { MdAttachMoney } from "react-icons/md";
 import { RiSecurePaymentLine } from "react-icons/ri";
 import { BsStarFill } from 'react-icons/bs';
 import { useParams } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 
@@ -12,6 +13,7 @@ const Infopage = () => {
   const [productinfo, setproductinfo] = useState(null);
   const [totalPrice, setTotalPrice] = useState(0);
   const [userInput, setUserInput] = useState(1);
+  const dispatch = useDispatch();
 
   console.log("URL id:", id);
 
@@ -38,24 +40,39 @@ const Infopage = () => {
     };
     fetchProduct();
   }, [id]);
-  function handlecartclick(){
-    dispatch({type:'increament'})
-    dispatch({type:'add_to_cart', payload:productinfo})
-    
-  }
+
+  // Handle Add to Cart
+  const handlecartclick = () => {
+    if (productinfo) {
+      dispatch({ type: 'increment' }); // Matches the counterSlice reducer
+      dispatch({
+        type: 'add_to_cart',
+        payload: { ...productinfo, quantity: userInput }, // Matches the cart reducer
+      });
+    } else {
+      console.error("Product information is not available.");
+    }
+  };
+
   // Handle quantity change and price calculation
   const handleChange = (e) => {
     const quantity = parseInt(e.target.value, 10);
-    setUserInput(quantity);
-    if (productinfo) {
-      setTotalPrice(quantity * productinfo.price); // Update total price based on quantity
+    if (quantity >= 1 && quantity <= 5) {
+      setUserInput(quantity);
+      if (productinfo) {
+        setTotalPrice(quantity * productinfo.price); // Update total price based on quantity
+      }
+    } else {
+      console.error("Quantity must be between 1 and 5.");
     }
   };
 
   if (!productinfo) {
     return <div>Loading or Product not found...</div>;
   }
-  const mrp = parseInt((productinfo.price) / (1 - (productinfo.discount / 100)))
+
+  const mrp = parseInt(productinfo.price / (1 - productinfo.discount / 100));
+
   return (
     <div className='m-0 p-0 max-w-screen'>
       <div className='block lg:flex min-w-screen'>
@@ -73,9 +90,15 @@ const Infopage = () => {
           </span>
           <p className='mb-4'>MRP ${mrp}<br /> Inclusive of all taxes</p>
           <div className='flex justify-around mb-4'>
-              <Link to={'/page1'}><div className='text-center'><PiTruck size={40} className='mx-auto' />Cash On Delivery</div></Link>
-              <Link to={'/page2'}><div className='text-center'><MdAttachMoney size={40} className='mx-auto' />30 day return & replacement</div></Link>
-              <Link to={'/page3'}><div className='text-center'><RiSecurePaymentLine size={40} className='mx-auto' />Secure Payments</div></Link>
+            <Link to={'/page1'}>
+              <div className='text-center'><PiTruck size={40} className='mx-auto' />Cash On Delivery</div>
+            </Link>
+            <Link to={'/page2'}>
+              <div className='text-center'><MdAttachMoney size={40} className='mx-auto' />30 day return & replacement</div>
+            </Link>
+            <Link to={'/page3'}>
+              <div className='text-center'><RiSecurePaymentLine size={40} className='mx-auto' />Secure Payments</div>
+            </Link>
           </div>
           <p className='mb-2'>Product warranty</p>
           <p className='mb-2'>Shipping Information</p>
@@ -84,19 +107,30 @@ const Infopage = () => {
             <label htmlFor="quantity" className="block text-lg font-medium">
               Quantity
             </label>
-            <input type="number" id="quantity" min="1" max={5} value={userInput} onChange={handleChange} defaultValue={1} className="mt-1 block w-full p-2 border border-gray-300 rounded-md" />
+            <input
+              type="number"
+              id="quantity"
+              min="1"
+              max={5}
+              value={userInput}
+              onChange={handleChange}
+              className="mt-1 block w-full p-2 border border-gray-300 rounded-md"
+            />
           </div>
           <div className='flex justify-around w-[300px]'>
-          <Link to={`/Buy/${productinfo.id}`}>
-          <button className="bg-amber-400 text-black px-6 py-3 rounded-lg hover:bg-amber-500 transition duration-300">
-            Buy Now
-          </button>
-          </Link>
-          <Link to={`/cart/${productinfo.id}`}>
-            <button className="bg-amber-400 text-black px-6 py-3 rounded-lg hover:bg-amber-500 transition duration-300">
-              Add To Cart
-            </button>
-          </Link>
+            <Link to={`/Buy/${productinfo.id}`}>
+              <button className="bg-amber-400 text-black px-6 py-3 rounded-lg hover:bg-amber-500 transition duration-300">
+                Buy Now
+              </button>
+            </Link>
+            <Link to={`/cart/${productinfo.id}`}>
+              <button
+                className="bg-amber-400 text-black px-6 py-3 rounded-lg hover:bg-amber-500 transition duration-300"
+                onClick={handlecartclick}
+              >
+                Add To Cart
+              </button>
+            </Link>
           </div>
         </div>
       </div>
@@ -106,7 +140,8 @@ const Infopage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="bg-white p-6 rounded-lg shadow-lg">
               <div className="flex items-center mb-4">
-                <div> <h3 className="text-lg font-semibold">reviewerName</h3>
+                <div>
+                  <h3 className="text-lg font-semibold">reviewerName</h3>
                   <p className="text-gray-600">reviewerEmail</p>
                   <p className="text-gray-600">comment</p>
                   <p className="text-gray-600">review date</p>
