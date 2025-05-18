@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 
 export default function Cart() {
   const dispatch = useDispatch();
-  const cartItems = useSelector((state) => state.cart);
+  const cartItems = useSelector((state) => state.cart); // Get cart items from Redux store
 
   const handleDeleteCart = (id) => {
     dispatch({ type: 'remove_to_cart', payload: { id } });
@@ -17,8 +17,20 @@ export default function Cart() {
     dispatch({ type: 'decrement_quantity', payload: { id } });
   };
 
+  // If the cart is empty, show a message
   if (!cartItems || cartItems.length === 0) {
-    return <p className="text-center mt-10">Your cart is empty!</p>;
+    return (
+      <div className="text-center mt-10">
+        <p className="text-xl font-semibold">Your cart is empty!</p>
+        <p className="text-gray-500 mt-2">Add some products to your cart to see them here.</p>
+        <button
+          className="mt-4 px-4 py-2 bg-blue-500 text-white rounded-md"
+          onClick={() => window.history.back()} // Navigate back to the previous page
+        >
+          Go Back
+        </button>
+      </div>
+    );
   }
 
   return (
