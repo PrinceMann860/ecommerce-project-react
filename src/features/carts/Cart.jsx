@@ -80,7 +80,7 @@ export default function Cart() {
               <h6 className="mt-3">Rating: ⭐⭐⭐⭐⭐</h6>
               <button
                 onClick={() => handleDeleteCart(item.id)}
-                className="font-bold mt-4 lg:mt-8 px-2 py-2 rounded-md bg-red-500 text-white"
+                className="font-bold mt-4 lg:mt-8 px-2 py-2 rounded-md bg-black text-white"
               >
                 Remove
               </button>
@@ -110,7 +110,7 @@ export default function Cart() {
           </div>
           <hr className="w-auto h-1 bg-black mt-6" />
           <div className="flex justify-center mt-5">
-            <button className="bg-green-500 text-white px-6 py-2 rounded-md font-bold">
+            <button className="bg-amber-400 text-black px-6 py-2 rounded-md font-bold">
               Proceed to Checkout
             </button>
           </div>

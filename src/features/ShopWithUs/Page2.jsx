@@ -7,7 +7,7 @@ const LandingPage = () => {
       {/* Hero Section */}
       <header className="bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 text-gray-900 py-20 px-4">
         <div className="container mx-auto text-center">
-          <h1 className="text-5xl font-bold mb-4">30-Day Money-Back Guarantee</h1>
+          <h1 className="text-5xl font-bold mb-4">30-Days Money-Back Guarantee</h1>
           <p className="text-lg mb-6">We stand by our products. Love it, or get your money back.</p>
         </div>
       </header>
