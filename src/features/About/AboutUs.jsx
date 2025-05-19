@@ -24,6 +24,13 @@ import React from 'react'
                   <p className="text-gray-600 bg-gray-100 p-7">As a Co-Developer, I contribute significantly to the team by collaborating closely with peers to develop and refine software solutions. My role involves coding, debugging, and maintaining applications, ensuring they meet high standards of performance and usability. I actively participate in brainstorming sessions, providing innovative ideas and solutions. Staying updated with the latest technological advancements, I bring fresh perspectives to the team, helping us stay ahead of industry trends.</p>
                 </div>
               </div>
+              <div className="bg-white shadow-lg rounded-lg overflow-hidden">
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-gray-800">Deepanshu Chauhan</h3>
+                  <p className="text-gray-600 text-lg">Co-Developer</p>
+                  <p className="text-gray-600 bg-gray-100 p-7">As a Co-Developer, I contribute significantly to the team by collaborating closely with peers to develop and refine software solutions. My role involves coding, debugging, and maintaining applications, ensuring they meet high standards of performance and usability. I actively participate in brainstorming sessions, providing innovative ideas and solutions. Staying updated with the latest technological advancements, I bring fresh perspectives to the team, helping us stay ahead of industry trends.</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
